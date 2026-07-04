@@ -1,13 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HKR Digital</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holoker Digital</title>
+  <style>
+    :root {
+      --accent: #00aeb3;
+      --text: #111111;
+      --muted: #666666;
+      --card: #ffffff;
+      --background: #f7f9fb;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--background);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 22px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 48px 0 36px;
+    }
+
+    .logo {
+      width: 180px;
+      max-width: 60%;
+      border-radius: 28px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 44px;
+      margin: 0 0 12px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: var(--muted);
+      margin: 0 auto;
+      max-width: 640px;
+      line-height: 1.5;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 28px;
+      margin-top: 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    p {
+      line-height: 1.65;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    a.button {
+      text-decoration: none;
+      background: var(--accent);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    a.secondary {
+      background: #e8f7f8;
+      color: #007f83;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 42px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>HKR Digital</h1>
-    <p>Official website for HKR Digital.</p>
-    <p>Developer of the Kidrout iOS application.</p>
+  <main class="container">
+    <section class="hero">
+      <img src="Logo.png" alt="Holoker Digital logo" class="logo" />
+      <h1>Holoker Digital</h1>
+      <p class="subtitle">
+        Independent iOS development focused on simple, useful and family-friendly digital tools.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Kidrout</h2>
+      <p>
+        Kidrout helps families organize daily routines, tasks, rewards and progress in a clear and motivating way.
+        It is designed for parents and children who want a calmer, more structured day.
+      </p>
+      <div class="buttons">
+        <a class="button" href="https://apps.apple.com/app/kidrout/id6779928574">View on App Store</a>
+        <a class="button secondary" href="https://hkrdigital.github.io/kidrout-support/">Support</a>
+        <a class="button secondary" href="https://hkrdigital.github.io/kidrout-support/privacy.html">Privacy Policy</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Support</h2>
+      <p>
+        For support, questions or feedback about Kidrout, please contact:
+      </p>
+      <p>
+        <strong>iholoker@icloud.com</strong>
+      </p>
+    </section>
+
+    <p class="footer">© 2026 HKR Digital. Created by Ivan Holoker.</p>
+  </main>
 </body>
 </html>
