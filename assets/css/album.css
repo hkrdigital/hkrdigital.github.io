@@ -1,0 +1,150 @@
+/* ============================================ */
+/* CSS för album/produkter                     */
+/* ============================================ */
+
+/* ============================================ */
+/* Album Grid Layout                           */
+/* ============================================ */
+
+.albums-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+/* ============================================ */
+/* Album Card                                   */
+/* ============================================ */
+
+.album-card {
+    background-color: #F2F1E0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.album-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================ */
+/* Album Image                                  */
+/* ============================================ */
+
+.album-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: #FAE89E;
+}
+
+/* ============================================ */
+/* Album Info                                   */
+/* ============================================ */
+
+.album-info {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.album-title {
+    font-family: 'Ultra', serif;
+    font-size: 18px;
+    color: #A31F26;
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+
+.album-artist {
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    color: #060507;
+    margin: 0 0 8px 0;
+    font-style: italic;
+}
+
+.album-year {
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    color: #7A141C;
+    margin: 0 0 12px 0;
+}
+
+/* ============================================ */
+/* Album Price and Button                       */
+/* ============================================ */
+
+.album-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.album-price {
+    font-family: 'Ultra', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #A31F26;
+}
+
+.album-button {
+    background-color: #7A141C;
+    color: #FFFFF0;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    flex: 1;
+}
+
+.album-button:hover {
+    background-color: #A31F26;
+}
+
+.album-button:active {
+    background-color: #060507;
+}
+
+/* ============================================ */
+/* Genre Badge                                  */
+/* ============================================ */
+
+.album-genre {
+    display: inline-block;
+    background-color: #FAE89E;
+    color: #060507;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 8px;
+}
+
+/* ============================================ */
+/* Empty State                                  */
+/* ============================================ */
+
+.no-albums {
+    text-align: center;
+    padding: 40px 20px;
+    color: #7A141C;
+}
+
+.no-albums p {
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+}

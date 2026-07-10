@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varukorg - Vinylklubben</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <!-- Ultra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+
+    <!-- Roboto Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================ */
+        /* Varukorg Specifika Stilar                    */
+        /* ============================================ */
+
+        .cart-container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 24px;
+            width: 60%;
+            left: 0;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 80px 1fr 100px 80px;
+            gap: 16px;
+            align-items: center;
+            padding: 16px;
+            background-color: #F2F1E0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+            background-color: #FAE89E;
+        }
+
+        .cart-item-info h3 {
+            font-family: 'Ultra', serif;
+            font-size: 16px;
+            color: #A31F26;
+            margin: 0 0 4px 0;
+        }
+
+        .cart-item-info p {
+            font-family: 'Roboto Slab', serif;
+            font-size: 14px;
+            color: #060507;
+            margin: 0;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quantity-input {
+            width: 50px;
+            padding: 4px;
+            border: 1px solid #A31F26;
+            border-radius: 4px;
+            text-align: center;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .cart-item-price {
+            font-family: 'Ultra', serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #A31F26;
+            text-align: right;
+        }
+
+        .remove-button {
+            background-color: #7A141C;
+            color: #FFFFF0;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .remove-button:hover {
+            background-color: #A31F26;
+        }
+
+        .cart-summary {
+            background-color: #FAE89E;
+            padding: 24px;
+            border-radius: 8px;
+            width: 100%;
+            flex-direction: column;
+            right: 0;
+            position: sticky;
+            height: fit-content;
+        }
+
+        .cart-summary h2 {
+            font-family: 'Ultra', serif;
+            font-size: 20px;
+            color: #A31F26;
+            margin: 0 0 16px 0;
+            text-align: left;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Roboto Slab', serif;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #060507;
+        }
+
+        .summary-row.total {
+            border-top: 2px solid #A31F26;
+            padding-top: 12px;
+            margin-top: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .checkout-button {
+            width: 100%;
+            background-color: #7A141C;
+            color: #FFFFF0;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Ultra', serif;
+            font-size: 16px;
+            margin-top: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-button:hover {
+            background-color: #A31F26;
+        }
+
+        .continue-shopping {
+            display: inline-block;
+            margin-top: 16px;
+            background-color: #F2F1E0;
+            color: #060507;
+            border: 2px solid #A31F26;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'Roboto Slab', serif;
+            transition: all 0.3s ease;
+        }
+
+        .continue-shopping:hover {
+            background-color: #A31F26;
+            color: #FFFFF0;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 40px 20px;
+            color: #7A141C;
+        }
+
+        .empty-cart p {
+            font-size: 18px;
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- Page header: logo och sidtitel           -->
+    <!-- ============================================ -->
+    <header>
+        <div class="header-left">
+            <p class="header-title"><i class="fa-solid fa-record-vinyl"></i> Vinylklubben</p>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- Main layout: sidebar + article innehåll     -->
+    <!-- ============================================ -->
+    <main class="page-grid">
+
+        <!-- Sidebar med navigationsmeny -->
+        <aside class="sidebar">
+            <nav>
+                <h2>Meny</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-home"></i> Hem</a></li>
+                    <li><a href="produkter.html"><i class="fa-solid fa-lines-leaning"></i> Produkter</a></li>
+                    <li><a href="varukorg.html"><i class="fa-solid fa-cart-shopping"></i> Varukorg</a></li>
+                </ul>
+            </nav>
+
+            <!-- Kontaktformulär -->
+            <section class="contact-box">
+                <h2>Kontakt</h2>
+                <form>
+                    <label for="email">E-post</label>
+                    <input type="email" id="email" name="email" placeholder="exempel@mail.com">
+
+                    <label for="message">Meddelande</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Skriv ditt meddelande här..."></textarea>
+
+                    <button type="submit">Skicka</button>
+                </form>
+            </section>
+        </aside>
+
+        <!-- Article med varukorg -->
+        <article>
+            <div class="cart-header">
+                <h1>Varukorg</h1>
+            </div>
+            <!-- Cart Items -->
+            <div>
+                <div class="cart-items" id="cartItems">
+                    <div class="empty-cart">
+                            <p>Din varukorg är tom</p>
+                            <a href="produkter.html" class="continue-shopping">Fortsätt handla</a>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Cart Summary  -->
+                <div>
+                    <div class="cart-summary">
+                        <h2>Sammanfattning</h2>
+                        <div class="summary-row">
+                            <span>Delsumma:</span>
+                            <span id="subtotal">0 SEK</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Frakt:</span>
+                            <span id="shipping">59 SEK</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Moms:</span>
+                            <span id="tax">0 SEK</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Totalt:</span>
+                            <span id="total">0 SEK</span>
+                        </div>
+                        <button class="checkout-button" id="checkoutBtn">Gå till kassa</button>
+                        <a href="produkter.html" class="continue-shopping">Fortsätt handla</a>
+                    </div>
+                </div>
+        </article>
+
+        <!-- Right sidebar with photo gallery -->
+        <aside class="right-sidebar">
+            <h2>Skivsamlingen</h2>
+            <div class="photo-gallery">
+                <div class="gallery-item">
+                    <img class="album-cover" src="Elektronisk1.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Pop3.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Klassiskt2.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Rock2.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Rock3.jpg" alt="Skivomslag">
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- Footer section                               -->
+    <!-- ============================================ -->
+    <footer>
+        <p class="footer-text"><i class="fa-solid fa-record-vinyl"></i> © Vinylklubben 2026</p>
+    </footer>
+
+    <script>
+        function getCartItems() {
+            const cart = localStorage.getItem('cart');
+            return cart ? JSON.parse(cart) : [];
+        }
+        const TAX_RATE = 0.25; // 25% moms
+        const SHIPPING = 59; // Fast fraktkostnad
+
+        function renderCart() {
+            const cartContainer = document.getElementById('cartItems');
+
+            const cartItems = getCartItems();
+
+            if (cartItems.length === 0) {
+                cartContainer.innerHTML = `
+                    <div class="empty-cart">
+                        <p>Din varukorg är tom</p>
+                        <a href="produkter.html" class="continue-shopping">Fortsätt handla</a>
+                    </div>
+                `;
+                updateSummary();
+                return;
+            }
+
+            cartContainer.innerHTML = cartItems.map((item, index) => `
+                <div class="cart-item">
+                    <div class="cart-item-image"></div>
+                    <div class="cart-item-info">
+                        <h3>${item.title}</h3>
+                        <p>${item.artist}</p>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-index="${index}">
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; width: 160px;">
+                        <span class="cart-item-price">${(item.price * item.quantity)} SEK</span>
+                        <button class="remove-button" data-index="${index}">Ta bort</button>
+                    </div>
+                </div>
+            `).join('');
+
+            // Add event listeners
+            document.querySelectorAll('.quantity-input').forEach(input => {
+                input.addEventListener('change', (e) => {
+                    const index = e.target.dataset.index;
+                    cartItems[index].quantity = Math.max(1, parseInt(e.target.value) || 1);
+                    renderCart();
+                });
+            });
+
+            document.querySelectorAll('.remove-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const index = e.target.dataset.index;
+                    cartItems.splice(index, 1);
+                    renderCart();
+                });
+            });
+
+            updateSummary();
+        }
+
+        function updateSummary() {
+            const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = Math.round(subtotal * TAX_RATE);
+            const total = subtotal + tax + (cartItems.length > 0 ? SHIPPING : 0);
+
+            document.getElementById('subtotal').textContent = `${subtotal} SEK`;
+            document.getElementById('tax').textContent = `${tax} SEK`;
+            document.getElementById('total').textContent = `${total} SEK`;
+
+            // Show/hide shipping
+            const shippingRow = document.getElementById('shipping').parentElement;
+            if (cartItems.length === 0) {
+                shippingRow.style.display = 'none';
+            } else {
+                shippingRow.style.display = 'flex';
+            }
+        }
+
+        // Checkout button
+        document.getElementById('checkoutBtn').addEventListener('click', () => {
+            if (cartItems.length > 0) {
+                alert('Tack för din beställning! Denna funktionalitet är under utveckling.');
+            }
+        });
+
+        // Initial render
+        renderCart();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+/* ============================================ */
+/* CSS för index.html                         */
+/* ============================================ */
+
+/* ============================================ */
+/* Grundläggande sidinställningar              */
+/* ============================================ */
+
+body {
+    margin: 0;
+    background-color: #FFFFF0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    color: #060507;
+}
+
+/* ============================================ */
+/* Layout: sidhuvud, sidebar och huvudinnehåll  */
+/* ============================================ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #F2F1E0;
+    padding: 5px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 100;
+}
+
+header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.page-grid {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #FAE89E;
+    padding: 24px;
+    overflow: visible;
+}
+
+footer {
+    position: fixed;
+    padding: 20px 24px;
+    bottom: 0;
+    left: 250px;
+    right: 256px;
+    background-color: #F2F1E0;
+    text-align: center;
+    font-size: 14px;
+    color: #060507;
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer {
+    flex-shrink: 0;
+}
+
+/* ============================================ */
+/* Sidebar: navigation och kontaktformulär       */
+/* ============================================ */
+
+.sidebar nav h2,
+.sidebar .contact-box h2,
+.sidebar .search-filter h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.search-filter {
+    margin-bottom: 24px;
+}
+
+.sidebar a {
+    color: #060507;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar a:active {
+    color: #7a141c;
+}
+
+.contact-box p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.contact-box label,
+.search-filter label {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+}
+
+.contact-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-box input,
+.contact-box textarea,
+.search-filter input,
+.search-filter select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #A31F26;
+    border-radius: 8px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.contact-box button {
+    background-color: #A31F26;
+    color: #FFFFF0;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.contact-box button:hover {
+    background-color: #7a141c;
+}
+
+.contact-box button:active {
+    background-color: #603a24;
+    transform: scale(0.98);
+}
+
+/* ============================================ */
+/* Huvudinnehåll: artikel och text              */
+/* ============================================ */
+
+article {
+    position: fixed;
+    top: 60px;
+    left: 274px;
+    right: 280px;
+    bottom: 100px;
+    background-color: #FFFFF0;
+    border-radius: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    padding: 40px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.link {
+    color: #A31F26;
+    text-decoration: none;
+}
+
+.omslag {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.titel {
+    font-family: 'Ultra', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #A31F26;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ============================================ */
+/* Right sidebar: photo gallery                 */
+/* ============================================ */
+
+.right-sidebar {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    width: 256px;
+    background-color: #FAE89E;
+    padding: 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.right-sidebar h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: left;
+    color: #060507;
+    font-family: "Ultra", serif;
+}
+
+.gallery-item-title {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    color: #060507;
+    font-family: 'Roboto Slab', serif;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.album-cover {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.album-cover:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    color: #060507;
+}
+
+.p-article {
+    width: 90%;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+p {
+    color: #060507;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+li {
+    color: #060507;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Roboto Slab', serif;
+    width: 90%;
+}
+
+/* ============================================ */
+/* Typografi och rubriker                       */
+/* ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #A31F26;
+    font-family: "Ultra", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 45.3px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    scroll-margin-top: 100px;
+}
+
+h3 {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    scroll-margin-top: 100px;
+}
+
+h4 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+h6 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    color: #A31F26;
+    font-family: "Ultra", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.footer-text {
+    color: #060507;
+    font-family: 'Roboto Slab', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+}
+
+.fascinate-inline-regular {
+    font-family: "Fascinate Inline", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-slab {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ============================================ */
+/* Bildstil och dekoration                      */
+/* ============================================ */
+
+.delare {
+    width: 60px;
+    height: 5px;
+}
+
+.palett {
+    width: 450px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}

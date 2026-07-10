@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkter - Vinylklubben</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!-- Album styles -->
+    <link rel="stylesheet" href="assets/css/album.css">
+
+    <!-- Google Fonts -->
+    <!-- Ultra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+
+    <!-- Roboto Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- Page header: logo och sidtitel           -->
+    <!-- ============================================ -->
+    <header>
+        <div class="header-left">
+            <p class="header-title"><i class="fa-solid fa-record-vinyl"></i> Vinylklubben</p>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- Main layout: sidebar + article innehåll     -->
+    <!-- ============================================ -->
+    <main class="page-grid">
+
+        <!-- Sidebar med navigationsmeny -->
+        <aside class="sidebar">
+            <nav>
+                <h2>Meny</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-home"></i> Hem</a></li>
+                    <li><a href="produkter.html"><i class="fa-solid fa-lines-leaning"></i> Produkter</a></li>
+                    <li><a href="varukorg.html"><i class="fa-solid fa-cart-shopping"></i> Varukorg</a></li>
+                </ul>
+            </nav>
+
+            <!-- Sökfilter -->
+            <section class="contact-box">
+                <h2>Filter</h2>
+                <form>
+                    <label for="genre">Genre</label>
+                    <select id="genre" name="genre">
+                        <option value="">Alla genrer</option>
+                        <option value="rock">Rock</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="pop">Pop</option>
+                        <option value="klassisk">Klassisk</option>
+                        <option value="elektronisk">Elektronisk</option>
+                    </select>
+
+                    <label for="pris">Maxpris</label>
+                    <input type="range" id="pris" name="pris" min="0" max="500" value="500">
+                    <p id="prisText">0 - 500 SEK</p>
+
+                    <button type="submit">Filtrera</button>
+                </form>
+            </section>
+        </aside>
+
+        <!-- Article med produkter -->
+        <article>
+
+            <h1>Produkter</h1>
+            <p class="p-article">Välkommen till vår skivsamling. Här kan du bläddra bland våra utvalda vinyl-skivor från olika genrer och epoker.</p>
+
+            <!-- Album Grid -->
+            <section class="albums-container">
+                <!-- Album 1 -->
+                <div class="album-card">
+                    <img class="album-image" src="Elektronisk1.jpg" alt="Album Omslag">
+                    <div class="album-info">
+                        <div>
+                            <h3 class="album-title">Digital Echoes</h3>
+                            <p class="album-artist">Echoform</p>
+                            <p class="album-year">1999</p>
+                            <span class="album-genre">Elektroniskt</span>
+                        </div>
+                        <div class="album-footer">
+                            <span class="album-price">299 SEK</span>
+                            <button class="album-button">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album 2 -->
+                <div class="album-card">
+                    <img class="album-image" src="Jazz1.jpg" alt="Album Omslag">
+                    <div class="album-info">
+                        <div>
+                            <h3 class="album-title">After Midnight Café</h3>
+                            <p class="album-artist">Ella Monroe Quartet</p>
+                            <p class="album-year">1959</p>
+                            <span class="album-genre">Jazz</span>
+                        </div>
+                        <div class="album-footer">
+                            <span class="album-price">349 SEK</span>
+                            <button class="album-button">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album 3 -->
+                <div class="album-card">
+                    <img class="album-image" src="Rock1.jpg" alt="Album Omslag">
+                    <div class="album-info">
+                        <div>
+                            <h3 class="album-title">Northern Highway</h3>
+                            <p class="album-artist">Crimson Avenue</p>
+                            <p class="album-year">1977</p>
+                            <span class="album-genre">Rock</span>
+                        </div>
+                        <div class="album-footer">
+                            <span class="album-price">329 SEK</span>
+                            <button class="album-button">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album 4 -->
+                <div class="album-card">
+                    <img class="album-image" src="Pop1.jpg" alt="Album Omslag">
+                    <div class="album-info">
+                        <div>
+                            <h3 class="album-title">Endless Summer</h3>
+                            <p class="album-artist">Luna Hart</p>
+                            <p class="album-year">2003</p>
+                            <span class="album-genre">Pop</span>
+                        </div>
+                        <div class="album-footer">
+                            <span class="album-price">399 SEK</span>
+                            <button class="album-button">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album 5 -->
+                <div class="album-card">
+                    <img class="album-image" src="Klassiskt1.jpg" alt="Album Omslag">
+                    <div class="album-info">
+                        <div>
+                            <h3 class="album-title">Aurora Nocturna</h3>
+                            <p class="album-artist">Aurora Chamber Orchestra</p>
+                            <p class="album-year">1959</p>
+                            <span class="album-genre">Klassiskt</span>
+                        </div>
+                        <div class="album-footer">
+                            <span class="album-price">279 SEK</span>
+                            <button class="album-button">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album 6 -->
+                <div class="album-card">
+                    <img class="album-image" src="Elektronisk2.jpg" alt="Album Omslag">
+                    <div class="album-info">
+                        <div>
+                            <h3 class="album-title">Static Waves</h3>
+                            <p class="album-artist">SYNTH/01</p>
+                            <p class="album-year">2005</p>
+                            <span class="album-genre">Elektroniskt</span>
+                        </div>
+                        <div class="album-footer">
+                            <span class="album-price">289 SEK</span>
+                            <button class="album-button">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album 7 -->
+                <div class="album-card">
+                    <img class="album-image" src="Jazz2.jpg" alt="Album Omslag">
+                    <div class="album-info">
+                        <div>
+                            <h3 class="album-title">Late Night Groove</h3>
+                            <p class="album-artist">Miles Carter Trio</p>
+                            <p class="album-year">1967</p>
+                            <span class="album-genre">Jazz</span>
+                        </div>
+                        <div class="album-footer">
+                            <span class="album-price">359 SEK</span>
+                            <button class="album-button">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album 8 -->
+                <div class="album-card">
+                    <img class="album-image" src="Rock2.jpg" alt="Album Omslag">
+                    <div class="album-info">
+                        <div>
+                            <h3 class="album-title">Riot at Dawn</h3>
+                            <p class="album-artist">Northern Wolves</p>
+                            <p class="album-year">1989</p>
+                            <span class="album-genre">Rock</span>
+                        </div>
+                        <div class="album-footer">
+                            <span class="album-price">399 SEK</span>
+                            <button class="album-button">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Album 9 -->
+                <div class="album-card">
+                    <img class="album-image" src="Pop2.jpg" alt="Album Omslag">
+                    <div class="album-info">
+                        <div>
+                            <h3 class="album-title">Paper Stars</h3>
+                            <p class="album-artist">The Skylights</p>
+                            <p class="album-year">1997</p>
+                            <span class="album-genre">Pop</span>
+                        </div>
+                        <div class="album-footer">
+                            <span class="album-price">249 SEK</span>
+                            <button class="album-button">Lägg i varukorg</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+        <!-- Right sidebar with photo gallery -->
+        <aside class="right-sidebar">
+            <h2>Skivsamlingen</h2>
+            <div class="photo-gallery">
+                <div class="gallery-item">
+                    <img class="album-cover" src="Elektronisk1.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Pop3.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Klassiskt2.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Rock2.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Rock3.jpg" alt="Skivomslag">
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- Footer section                               -->
+    <!-- ============================================ -->
+    <footer>
+        <p class="footer-text"><i class="fa-solid fa-record-vinyl"></i> © Vinylklubben 2026</p>
+    </footer>
+
+    <script>
+        // Handle Add to Cart buttons
+        document.querySelectorAll('.album-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const albumCard = this.closest('.album-card');
+                const title = albumCard.querySelector('.album-title').textContent;
+                alert(`${title} läggs till i varukorg!`);
+            });
+        });
+
+        // Handle price range filter
+        const priceRange = document.getElementById('pris');
+        const prisText = document.getElementById('prisText');
+        if (priceRange) {
+            priceRange.addEventListener('input', function() {
+                prisText.textContent = `0 - ${this.value} SEK`;
+            });
+        }
+    </script>
+
+</body>
+</html>

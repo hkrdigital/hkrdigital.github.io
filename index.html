@@ -1,178 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>holoker digital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinylklubben</title>
 
-  <style>
-    :root {
-      --accent: #00aeb3;
-      --text: #111111;
-      --muted: #666666;
-      --card: #ffffff;
-      --background: #f7f9fb;
-    }
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--background);
-      color: var(--text);
-    }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 48px 22px;
-    }
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
 
-    .hero {
-      text-align: center;
-      padding: 48px 0 36px;
-    }
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/album.css">
 
-    .logo {
-      width: 180px;
-      max-width: 60%;
-      border-radius: 28px;
-      margin-bottom: 24px;
-    }
+    <!-- Google Fonts -->
+    <!-- Ultra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
 
-    .large-logo {
-      width: 260px;
-    }
-
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin: 8px 0 12px;
-    }
-
-    .subtitle {
-      font-size: 20px;
-      color: var(--muted);
-      margin: 0 auto;
-      max-width: 640px;
-      line-height: 1.5;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 24px;
-      padding: 28px;
-      margin-top: 24px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-    }
-
-    h2 {
-      margin-top: 0;
-      font-size: 28px;
-    }
-
-    p {
-      line-height: 1.65;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    a.button {
-      text-decoration: none;
-      background: var(--accent);
-      color: white;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-
-    a.secondary {
-      background: #e8f7f8;
-      color: #007f83;
-    }
-
-    .footer {
-      text-align: center;
-      color: var(--muted);
-      margin-top: 48px;
-      padding: 24px 0;
-      font-size: 14px;
-      line-height: 1.8;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .footer p {
-      margin: 4px 0;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 34px;
-      }
-
-      .subtitle {
-        font-size: 18px;
-      }
-
-      .card {
-        padding: 22px;
-      }
-    }
-  </style>
+    <!-- Roboto Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <main class="container">
 
-    <section class="hero">
-      <img src="Logo.png" alt="Holoker Digital logo" class="logo large-logo" />
+    <!-- ============================================ -->
+    <!-- Page header: logo och sidtitel           -->
+    <!-- ============================================ -->
+    <header>
+        <div class="header-left">
+            <p class="header-title"><i class="fa-solid fa-record-vinyl"></i> Vinylklubben</p>
+        </div>
+    </header>
 
-      <h1>Holoker Digital</h1>
+    <!-- ============================================ -->
+    <!-- Main layout: sidebar + article innehåll     -->
+    <!-- ============================================ -->
+    <main class="page-grid">
 
-      <p class="subtitle">
-        Building thoughtful iOS apps for families and everyday life.
-      </p>
-    </section>
+        <!-- Sidebar med navigationsmeny och kontaktformulär -->
+        <aside class="sidebar">
+            <nav>
+                <h2>Meny</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-home"></i> Hem</a></li>
+                    <li><a href="produkter.html"><i class="fa-solid fa-lines-leaning"></i> Produkter</a></li>
+                    <li><a href="varukorg.html"><i class="fa-solid fa-cart-shopping"></i> Varukorg</a></li>
+                </ul>
+            </nav>
 
-    <section class="card">
-      <h2>Kidrout</h2>
+          <!-- Sökfilter -->
+            <section class="search-filter">
+                <h2>Sökfilter</h2>
+                <form>
+                    <input type="text" id="search" name="search" placeholder="Skriv produktnamn...">
+                    <button type="submit">Sök</button>
+                </form>
+            </section>
 
-      <p>
-        Kidrout helps families organize daily routines, tasks, rewards and progress in a clear and motivating way.
-        It is designed for parents and children who want a calmer, more structured day.
-      </p>
+            <!-- Kontaktformulär -->
+            <section class="contact-box">
+                <h2>Kontakt</h2>
+                <form>
+                    <input type="email" id="email" name="email" placeholder="exempel@mail.com">
 
-      <div class="buttons">
-        <a class="button" href="https://apps.apple.com/app/kidrout/id6779928574">View on App Store</a>
+                    <textarea id="message" name="message" rows="4" placeholder="Skriv ditt meddelande här..."></textarea>
 
-        <a class="button secondary" href="#support">Support</a>
+                    <button type="submit">Skicka</button>
+                </form>
+            </section>
+        </aside>
 
-        <a class="button secondary" href="https://hkrdigital.github.io/privacy.html">Privacy Policy</a>
-      </div>
-    </section>
+        <!-- Main content article -->
+        <article>
+            <h1 class="titel">Välkommen till Vinylklubben</h1>
 
-    <section class="card" id="support">
-      <h2>Support</h2>
+            <!-- Omslag -->
+            <img class="omslag" src="Omslag.png" alt="Omslag">
 
-      <p>
-        For support, questions or feedback about Kidrout, please contact:
-      </p>
+            <section>
+                <h2>Om oss</h2>
+                <p class="p-article">Vinylklubben är en skivbutik som specialiserar sig på vinylskivor från olika genrer och epoker.</p>
+            </section>
 
-      <p>
-        <strong>iholoker@icloud.com</strong>
-      </p>
-    </section>
+            <img class="delare" src="linje.png" alt="Dekorativ linje">
 
-    <footer class="footer">
-      <p>© 2026 Holoker Digital</p>
-      <p>Made in the EU 🇪🇺</p>
-    </footer>
+            <section>
+                <h2>Varför välja Vinylklubben?</h2>
+                <p class="p-article">Vi tror på kvalitet före kvantitet. Varje skiva i vår butik har valts med omsorg för att säkerställa:</p>
+                <ul>
+                    <li>Säkerställd ljudkvalitet på alla skivor</li>
+                    <li>Väl bevarade exemplar med originalomslagen</li>
+                    <li>Kompetent expertkunskap och personlig service</li>
+                </ul>
+            </section>
+
+            <img class="delare" src="linje.png" alt="Dekorativ linje">
+
+            <section>
+                <h2>Börja handla</h2>
+                <p class="p-article">Är du redo att börja din eller utöka din skivsamling? Besök vår <a class="link" href="produkter.html">produktsida</a> för att bläddra bland våra aktuella vinylskivor.</p>
+            </section>
+        </article>
+
+        <!-- Right sidebar with photo gallery -->
+        <aside class="right-sidebar">
+            <h2>Skivsamlingen</h2>
+            <div class="photo-gallery">
+                <div class="gallery-item">
+                    <img class="album-cover" src="Elektronisk1.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Pop3.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Klassiskt2.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Rock2.jpg" alt="Skivomslag">
+                </div>
+                <div class="gallery-item">
+                    <img class="album-cover" src="Rock3.jpg" alt="Skivomslag">
+                </div>
+            </div>
+        </aside>
 
   </main>
+
+    <!-- ============================================ -->
+    <!-- Footer section                               -->
+    <!-- ============================================ -->
+    <footer>
+        <p class="footer-text"><i class="fa-solid fa-record-vinyl"></i> © Vinylklubben 2026</p>
+    </footer>
+
 </body>
 </html>
