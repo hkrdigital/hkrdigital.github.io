@@ -25,6 +25,17 @@ Features include:
 App Store:
 https://apps.apple.com/app/kidrout/id6779928574
 
+### JustMyKeyboardCleaner
+
+JustMyKeyboardCleaner is a simple macOS utility that temporarily disables keyboard input, allowing you to safely clean your keyboard without accidental keystrokes.
+
+Features include:
+
+- Temporarily disables keyboard input
+- Simple and lightweight design
+- Quick keyboard cleaning
+- Designed specifically for macOS
+
 ## Support
 
 https://hkrdigital.github.io/
