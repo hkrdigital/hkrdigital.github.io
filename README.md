@@ -2,11 +2,13 @@
 
 Official website and GitHub Pages repository for Holoker Digital.
 
+[Visit our website](https://hkrdigital.github.io/)
+
 ## About
 
-Holoker Digital is an independent software studio focused on creating thoughtfully designed iOS and iPadOS applications.
+Holoker Digital is an independent software studio focused on creating thoughtfully designed iOS, iPadOS and macOS applications.
 
-Our goal is to build simple, reliable and beautifully crafted apps that help families in everyday life.
+Our goal is to build simple, reliable and beautifully crafted apps for families and everyday life.
 
 ## Apps
 
@@ -22,29 +24,34 @@ Features include:
 - Family-friendly design
 - iPhone & iPad support
 
-App Store:
-https://apps.apple.com/app/kidrout/id6779928574
+[View on App Store](https://apps.apple.com/app/kidrout/id6779928574)
 
 ### JustMyKeyboardCleaner
 
-JustMyKeyboardCleaner is a simple macOS utility that temporarily disables keyboard input, allowing you to safely clean your keyboard without accidental keystrokes.
+JustMyKeyboardCleaner is a simple macOS utility that temporarily blocks keyboard input while you clean your keyboard.
 
 Features include:
 
-- Temporarily disables keyboard input
+- Cleaning with or without a countdown
+- Manual unlocking when you finish
 - Simple and lightweight design
-- Quick keyboard cleaning
 - Designed specifically for macOS
+- Free, with no ads and no account required
 
 ## Support
 
-https://hkrdigital.github.io/
+- [Kidrout support](https://hkrdigital.github.io/#support)
+- [JustMyKeyboardCleaner support](https://hkrdigital.github.io/justmykeyboardcleaner-support/)
+- [JustMyKeyboardCleaner — podrška na hrvatskom](https://hkrdigital.github.io/justmykeyboardcleaner-support/hr.html)
 
-## Privacy Policy
+For questions or feedback, contact [iholoker@icloud.com](mailto:iholoker@icloud.com). Please include the app name in your message.
 
-https://hkrdigital.github.io/privacy.html
+## Privacy Policies
+
+- [Kidrout Privacy Policy](https://hkrdigital.github.io/privacy.html)
+- [JustMyKeyboardCleaner Privacy Policy](https://hkrdigital.github.io/justmykeyboardcleaner-support/#privacy)
 
 ---
 
-© 2026 Holoker Digital
+© 2026 Holoker Digital  
 Made in the EU 🇪🇺
