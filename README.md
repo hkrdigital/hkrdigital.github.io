@@ -1,57 +1,33 @@
 # Holoker Digital
 
-Official website and GitHub Pages repository for Holoker Digital.
+**Official website: [holoker.eu](https://holoker.eu/)**
 
-[Visit our website](https://hkrdigital.github.io/)
-
-## About
-
-Holoker Digital is an independent software studio focused on creating thoughtfully designed iOS, iPadOS and macOS applications.
-
-Our goal is to build simple, reliable and beautifully crafted apps for families and everyday life.
+Holoker Digital creates thoughtfully designed iOS, iPadOS and macOS applications. All existing and future Holoker apps use holoker.eu as their official website for product information, downloads, support and privacy policies. GitHub remains available for project listings and development.
 
 ## Apps
 
 ### Kidrout
 
-Kidrout helps families organize daily routines, tasks, rewards and progress in a clear and motivating way.
+Daily routines, tasks, rewards and progress for families on iPhone and iPad.
 
-Features include:
-
-- Daily routines
-- Rewards system
-- Progress tracking
-- Family-friendly design
-- iPhone & iPad support
-
-[View on App Store](https://apps.apple.com/app/kidrout/id6779928574)
+- [App information and support](https://holoker.eu/kidrout/)
+- [English](https://holoker.eu/en/kidrout/)
+- [Privacy policy](https://holoker.eu/kidrout-privacy/)
 
 ### JustMyKeyboardCleaner
 
-JustMyKeyboardCleaner is a simple macOS utility that temporarily blocks keyboard input while you clean your keyboard.
+A free macOS utility that temporarily blocks keyboard input while you clean. Choose a countdown or clean without a time limit, then unlock manually. No ads or account required.
 
-Features include:
-
-- Cleaning with or without a countdown
-- Manual unlocking when you finish
-- Simple and lightweight design
-- Designed specifically for macOS
-- Free, with no ads and no account required
+- [Official website and downloads](https://holoker.eu/)
+- [Podrška i privatnost](https://holoker.eu/justmykeyboardcleaner-support/)
+- [Support and privacy — English](https://holoker.eu/justmykeyboardcleaner-support/#english)
 
 ## Support
 
-- [Kidrout support](https://hkrdigital.github.io/#support)
-- [JustMyKeyboardCleaner support](https://hkrdigital.github.io/justmykeyboardcleaner-support/)
-- [JustMyKeyboardCleaner — podrška na hrvatskom](https://hkrdigital.github.io/justmykeyboardcleaner-support/hr.html)
+[Contact Holoker](https://holoker.eu/#kontakt). Please include the app name in your message.
 
-For questions or feedback, contact [iholoker@icloud.com](mailto:iholoker@icloud.com). Please include the app name in your message.
+## Website privacy
 
-## Privacy Policies
+[Privacy information](https://holoker.eu/privatnost/) · [English](https://holoker.eu/en/privacy/)
 
-- [Kidrout Privacy Policy](https://hkrdigital.github.io/privacy.html)
-- [JustMyKeyboardCleaner Privacy Policy](https://hkrdigital.github.io/justmykeyboardcleaner-support/#privacy)
-
----
-
-© 2026 Holoker Digital  
-Made in the EU 🇪🇺
+© 2026 Ivan Holoker
